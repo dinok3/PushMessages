@@ -1,0 +1,53 @@
+{%extends 'main/base.html'%}
+{%load static%}
+
+{%block content%}
+<div class="container">
+    <h2 class="mt-4 mb-3">All Pushover notes</h2>
+
+    <h4><a href="" class="add-new-button">Add new</a></h4>
+
+     <form action="" method="POST" class="note-form mb-4">
+        {%csrf_token%}
+       <label for=""> {{form.title.label}}: </label>        
+        {{form.title}}
+
+        <label for="">{{form.content.label}}: </label>        
+        {{form.content}}
+        <label for="">{{form.schedule.label}}: </label>
+        
+
+        {{form.schedule}}
+      
+        <button type="submit" class="btn btn-primary ">Add</button>
+    </form>
+    <hr>
+       <div class="notes">
+        {%for note in filter.qs%}
+        <div class="card mt-2 mb-2 card-{{note.id}}">
+            <div class="card-body">
+                <small class="text-muted">{{note.created}}</small>
+                <i class="fas fa-trash trash-icon" id ="{{note.id}}" data-url="{%url 'delete' note.pk%}"></i>
+                <a href="{%url 'update' note.id%}"><i class="fas fa-pen pen-icon" data-id ="{{note.id}}"></i></a>
+                <h4 class="card-title"> <span style="color:var(--dark-blue);"> {{note.title}}  </span>
+                </h4>
+                <p class="card-text">{{note.content}}</p>
+                <div class="schedule-id schedule-{{note.id}}" data-id="{{note.id}}" data-url="{%url 'send'%}">   
+                    <span style="color:var(--light-blue);">Notification will go off on: </span>{{note.schedule|date:"Y-m-d G:i"}}
+                </div>
+            </div>          
+        </div>
+        {%endfor%}
+    </div>
+    
+    
+    {%block update%}
+        
+    {%endblock%}
+        
+            
+    {{today|json_script:"today"}}
+
+</div>
+<script src="{%static 'js/home.js'%}"></script>
+{%endblock%}
