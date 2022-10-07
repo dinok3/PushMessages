@@ -25,6 +25,6 @@ USER = "your user key"
 ```
 
 
-![Brief look at the app](https://github.com/krivke/PushMessages/tree/master/main/static/images/)
+[Brief look at the app](https://github.com/krivke/PushMessages/tree/master/main/static/images/)
 
 
