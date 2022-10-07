@@ -9,7 +9,7 @@ Pushover has a 30-day free trial. After expiration you will have to purchase and
 
 ## Installation
 ```
-git clone https://github.com/krivke/PushMessages.git
+git clone https://github.com/dinok3/PushMessages.git
 cd PushMessages
 pip install -r requirements.txt
 py manage.py migrate
@@ -25,6 +25,6 @@ USER = "your user key"
 ```
 
 
-![Brief look at the app](https://github.com/krivke/PushMessages/tree/master/main/static/images/)
+![Brief look at the app](https://github.com/dinok3/PushMessages/tree/master/main/static/images/)
 
 
