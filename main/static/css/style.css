@@ -7,7 +7,6 @@
 }
 
 
-
 body{
     
     background-color:var(--bez) !important;
@@ -22,25 +21,24 @@ a{
 .note-form{
     display: none;
     align-items: center;
-  
-
 }
 
 label{
     margin-right:10px;
 }
 input{
-    margin-right: 10px !important;
+    margin-right: 10px!important;
+    padding-left: 0.5rem;
 }
-
 
 small{
-font-size: 0.8rem !important;
+    font-size: 0.8rem !important;
 }
+
 .notes{
     display: flex;
     flex-wrap: wrap;
- justify-content: space-between;
+    justify-content: space-between;
 }
 .card{
     width: 400px;
@@ -50,6 +48,10 @@ font-size: 0.8rem !important;
 i{
     cursor: pointer;
 }
+#id_title{
+    height: 40px;
+}
+
 .pen-icon{
     position: absolute;
     top:1.4rem;
@@ -113,9 +115,7 @@ i{
     .note-form{
         flex-wrap: wrap;
     }
-    .btn{
-        margin-top: 1rem;
-    }
+    
 }
 @media screen and (max-width:900px) {
     .update-form{
