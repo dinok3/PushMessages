@@ -17,7 +17,7 @@ py manage.py runserver
 ```
 
 Install Pushover and create an account on your phone to receive notifications.
-On ![Pushover website](https://pushover.net/) you will find your user key that you need to add into:
+On [Pushover website](https://pushover.net/) you will find your user key that you need to add into:
 
 settings.py: 
 ```
@@ -25,6 +25,6 @@ USER = "your user key"
 ```
 
 
-[Brief look at the app](https://github.com/krivke/PushMessages/tree/master/main/static/images/)
+![Brief look at the app](https://github.com/krivke/PushMessages/tree/master/main/static/images/)
 
 
