@@ -120,13 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-"""EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
-EMAIL_HOST_USER= "dkrivic2@gmail.com"
-EMAIL_HOST_PASSWORD= "benesthelebron1"
-"""
-TOKEN = "awi52pkzbbgwjxfdp9xwntwsdxsfh7"
-USER = "urvxzw4dvcz1ke62pumnumnmr3cdrz"
-PUSHOVER = "926w1kw9jm@pomail.net"
+
+TOKEN = "aasggqimaoyyxscz8pk2f2apv2jnpd"
+PUSHOVER = "rusu6judgx@pomail.net"
+
+
+USER = "uatowdyz14ka9rtwpw379spt1qwgfz" #your user key

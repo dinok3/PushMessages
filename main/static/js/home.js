@@ -34,13 +34,7 @@ for(let i = 0;i<trashes.length;i++){
     })
 }
 
-
-
-/*problem -- today se ne updatea kada pozovem opet ovu funkcije jer se
-            ne refresha stranica
-*/
-
-
+//formatting date
 function getDate() {
     var now     = new Date(); 
     var year    = now.getFullYear();
@@ -68,7 +62,6 @@ function getDate() {
 
 
 function pushover(){
-   
    var all_dates = document.querySelectorAll(".schedule-id");
    var today = getDate();
    for(let i=0;i<all_dates.length;i++){
@@ -76,7 +69,7 @@ function pushover(){
            var data_id = all_dates[i].getAttribute("data-id")
            var url = all_dates[i].getAttribute("data-url")
 
-         $.ajax({
+            $.ajax({
                  type:"POST",
                  url:url,
                  data:{
@@ -87,7 +80,7 @@ function pushover(){
                      console.log("sending message with id",data_id," on",today,"...");
                  },
                  error:function(e){
-                     console.log("badd")
+                     console.log("error: ",e)
                  }
                  
              })
@@ -95,9 +88,6 @@ function pushover(){
     
         }
         
-
-       
-
 }
 
 
@@ -121,7 +111,7 @@ add_button.addEventListener("click",function(e){
 window.onload = function(){
     pushover()
     setInterval(
-        pushover(),60000 //1 min
+        pushover,60000 //60000 //1 min
     )
     
 };  
